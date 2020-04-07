@@ -1,0 +1,37 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "A TailwindCSS starter file",
+  "main": "index.js",
+  "scripts": {
+    "tailwind:init": "tailwind init configs/tailwind.config.js",
+    "tailwind:full": "tailwind init configs.tailwind-full.config.js --full",
+    "build:css": "postcss configs/tailwind.config.css -o src/style.css",
+    "build:html": "html-minifier --input-dir ./src --output-dir ./build --collapse-whitespace",
+    "build:prod": "env NODE_ENV=production npm run build:css && npm run build:html",
+    "dev": "npm run build:css && live-server ./src --port=3000",
+    "prod": "npm run build:prod && live-server ./build --port=8080"
+  },
+  "keywords": [
+    "tailwindcss",
+    "tailwind",
+    "css",
+    "starter file",
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "hhttps://github.com/restaadiputra/tailwind-starter-file"
+  },
+  "author": "Resta Adiputra",
+  "license": "MIT",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
+    "html-minifier": "^4.0.0",
+    "live-server": "^1.2.1",
+    "postcss-cli": "^7.1.0",
+    "tailwindcss": "^1.2.0"
+  }
+}
