@@ -90,4 +90,4 @@ This command will create the TailwindCSS using `production` environment so the f
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
